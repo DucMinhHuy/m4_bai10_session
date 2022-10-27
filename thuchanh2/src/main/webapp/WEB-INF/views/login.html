@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+    <title>minhhuy Cookie</title>
+</head>
+<body>
+<h1 style="color:#ffc0c0">User Login</h1>
+<form action="#" th:action="@{/doLogin}" th:object="${huy}" method="post">
+    <table border="2">
+        <tr>
+            <td><label for="dog" style="color: cyan"> Email:</label></td>
+            <td><input style="color: blue" type="text" id="dog" name="email" placeholder="email" th:value="${cookieValue.value}"/></td>
+        </tr>
+        <tr>
+            <td><label for="god" style="color: cyan">Password: </label></td>
+            <td><input style="caret-color: blue" type="password" id="god" placeholder="password" th:field="*{password}"/></td>
+        </tr>
+    </table>
+    <input style="color: palevioletred" type="submit" value="Login"/>
+</form>
+<br>
+<span th:text="${message}"></span>
+
+<span th:text="${huy.email}"></span>
+</body>
+</html>

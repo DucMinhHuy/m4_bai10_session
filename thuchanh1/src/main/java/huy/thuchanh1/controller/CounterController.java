@@ -13,6 +13,7 @@ public class CounterController {
     public Counter setUpCounter(){
         return new Counter();
     }
+
     @GetMapping("")
     public String get(@ModelAttribute("counter") Counter counter){
         counter.increment();
